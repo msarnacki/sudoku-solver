@@ -1,7 +1,7 @@
 # Sudoku solver
 
 The plan for building this script:
-1. [x] first I will define function which checks if putting certain number in certein position is possible
+1. /(Done) first I will define function which checks if putting certain number in certein position is possible
 2. I am planning to do it in 2 different ways: 
    1. filling empty cells starting from top left corner and going right and then down
    - [ ] building mechanism which is gonna put first possible value in empty position
