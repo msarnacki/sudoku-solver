@@ -1,15 +1,21 @@
 # Sudoku solver
 
-The plan for building this script:
-1. (Done) first I will define function which checks if putting certain number in certein position is possible
-2. I am planning to do it in 2 different ways: 
-   1. filling empty cells starting from top left corner and going right and then down
-   - [ ] building mechanism which is gonna put first possible value in empty position
-   - [ ] if putting no number will be possible in certain place go one place back and try putting next number there and do it untill every position will be correctly filled
-   2. checking every empty cell and deciding where to put number first - in this case there are two possibilities
-     - there will always be at least one cell where you can put only one number in this cell
-         - [ ] put number in all these places and go on with looking for next ones
-     - there won't be cells which you can be sure to put exact number in there
-         - [ ] put one of possible numbers in cell and go on
-         - [ ] if at some  point there will be an error go back to this cell and put in another possible value
-   
+### The plan for building this script: ###
+- [x] defining function which checks if putting certain number in certein position is possible
+- [ ] make 1st solving algorithm:
+    1. start from top left cell
+    2. if the cell is empty (there is 0 in np.array) check if putting there number 1 is possible
+        - if it is possible put this number in the cell
+        - if it is not possible check next number (up to 9)
+    3. go to next empty cell (going right and down) and do point 2
+    4. when no number can be put in a cell go to cell before and check if there is another possible number (point 2) 
+        - if there is another possiblity go on with point 3
+        - if there is no another possiblity do point 4 again
+    5. keep doing points 2-4 untill every cell is filled
+- [ ] make 2nd solving algorithm:
+    1. check every empty cell for how many possiblities of putting number there is in each of them
+        - if there are cells where there is only one possibility of putting number, put these numbers in (don't know yet if putting them all at once will be good idea, it shouldn't make any errors if starting point of sudoku won't have errors)
+        - if there are no cell where there is only one possibility of putting number, put one of possible numbers in cell which have least possibilities from all empty cells
+            - if error will occur (no number will be possible to put in a cell) then go back to last cell where there were more than one possibility, put there another possible number and go on with points 1-2
+    2. check if every number put in cells in sudoku is valid
+    3. repeat points 1-2 untill every cell is filled
