@@ -1,6 +1,19 @@
 # Sudoku solver
 
 #### Script made fully by myself for training. Solving sudoku is a good example of recursive problems and good opportunity to practise using recursion. I planned to solve this problem in two ways:
+
+### Results (mean from 3 examples from websudoku.com):
+- 1st algorithm:
+    - Easy: Time = 0,01(3) sec, Recursions = 1433,(6)
+    - Medium: Time = 0,224(6) sec, Recursions = 25621,(3)
+    - Hard: only 1 from 3 examples ended with succes - other 2 went to over 90 000 recursions and crushed notebook
+    - Evil: Time = 0,29 sec, Recursions = 27777,(3)
+- 2nd algorithm:
+    - Easy: Time = 0,01 sec, Recursions = 13,(6)
+    - Medium: Time = 0,14(6) sec, Recursions = 475
+    - Hard: Time = 0,751(6) sec, Recursions = 2399,(3)
+    - Evil: Time = 0,732(6) sec, Recursions = 2264
+
 #### - 1st algorithm (DONE): 
     1. defining function which checks if putting certain number in certein position is possible
     2. it starts from top left cell
@@ -14,7 +27,7 @@
     6. keep doing points 3-5 untill every cell is filled
     - [x] it is done but does't work for harder sudoku (for these that need about 100 000 recursions and more - it is very non-optimized)
 
-#### - 2nd algorithm (IN PROGRESS):
+#### - 2nd algorithm (DONE):
     1. defining function which checks if putting certain number in certein position is possible
     2. check every empty cell for how many possiblities of putting number there is in each of them
         - if there are cells where there is only one possibility of putting number, put these numbers in (don't know yet if putting them all at once will be good idea, it shouldn't make any errors if starting point of sudoku won't have errors)
