@@ -1,5 +1,15 @@
 # Sudoku solver
 
+<p align="left">
+    <img src="https://img.shields.io/github/stars/msarnacki/sudoku-solver"/>
+    <img src="https://img.shields.io/github/watchers/msarnacki/sudoku-solver"/>
+    <img src="https://img.shields.io/github/commit-activity/t/msarnacki/sudoku-solver"/>
+    <img src="https://img.shields.io/github/last-commit/msarnacki/sudoku-solver"/>
+    <img src="https://img.shields.io/github/issues/msarnacki/sudoku-solver"/>
+    <img src="https://img.shields.io/github/languages/top/msarnacki/sudoku-solver"/>
+    <img src="https://img.shields.io/github/repo-size/msarnacki/sudoku-solver"/>
+</p>
+
 #### Script made fully by myself for training. Solving sudoku is a good example of recursive problems and good opportunity to practise using recursion. I planned to solve this problem in two ways:
 
 ### Results (mean from 3 examples from websudoku.com):
